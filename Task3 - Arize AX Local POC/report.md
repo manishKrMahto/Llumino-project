@@ -115,14 +115,14 @@ In an earlier manual run where the agent kept its chat history, it refused "igno
 **One-time setup** (PowerShell, inside the `Task3 - Arize AX Local POC` folder):
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate
 pip install -r requirements.txt
 copy .example.env .env          # then open .env and fill in your 3 keys
 ```
 
 **Every time:** turn on the virtual environment, then run:
 ```powershell
-.\.venv\Scripts\Activate.ps1
+.\.venv\Scripts\Activate
 
 python agent.py                 # quick demo: traces go to Arize project "order-agent" (~15 s)
 python evals.py                 # full test: 8 scenarios → Arize experiment → PASS / REVIEW / FAIL (~2 min)
