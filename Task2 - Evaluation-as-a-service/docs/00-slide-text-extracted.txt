@@ -1,0 +1,277 @@
+==================================================
+a.png
+==================================================
+
+Evaluation-as-a-Service Capabilities
+
+Evaluation-as-a-Service
+A governed, repeatable service for proving that AI applications are effective, safe and fit for purpose.
+
+What Is Evaluation-as-a-Service?
+
+Evaluation-as-a-Service provides a common enterprise approach for testing and monitoring AI models, applications and agents. It helps teams determine whether an AI solution is accurate, safe, reliable, cost-effective and appropriate for its intended business purpose.
+
+Evaluation is treated as a recurring operational control—not as a one-time test performed before launch. Each application has a governed, versioned evaluation suite that supports model selection, release decisions, production monitoring and continuous improvement.
+
+
+==================================================
+b.png
+==================================================
+
+Capability Overview
+
+Capability
+    D6 — Evaluation & Quality
+
+Capability Priority
+    Must Have
+
+Control Question
+    Is the AI solution good enough, safe enough and still fit for purpose?
+
+Capability Description
+    Governs application evaluation onboarding, offline and online evaluation, comparative model benchmarking, deployment gates, trajectory quality, automated judge models, human review and component-level testing.
+
+Operating Principle
+    Evaluation must be application-specific, versioned and recurring. It should not be treated as a launch-time report or as a universal model leaderboard.
+
+
+==================================================
+c.png
+==================================================
+
+Primary Beneficiaries
+
+Persona | How the Persona Benefits
+
+Agent Builder / Developer
+    Receives repeatable tests, detailed failure evidence and clear release criteria.
+
+Platform Admin / AI Operations
+    Gains standardized evaluation operations, production scoring and evidence of ongoing service quality.
+
+Risk Analyst / Compliance / Security
+    Gains evidence that safety, policy, regulatory and control requirements have been tested.
+
+Business Owner / LOB Sponsor
+    Gains evidence that the solution supports its intended outcome and remains fit for business use. Contributes feedback and human judgment to improve evaluation data (golden data) and consequently their application quality.
+
+
+==================================================
+d.png
+==================================================
+
+Core Evaluation Functions — Must Have
+
+# | Function | Description | Personas Benefiting Most | Key Attributes
+
+1
+Function: Evaluation Suites (Application-specific Golden Datasets)
+Description: Runs versioned datasets and scoring methods against candidate changes before they are promoted.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Risk Analyst / Compliance / Security
+    Business Owner / LOB Sponsor
+Key Attributes:
+    Coverage: Includes expected tasks, edge cases, policy failures and known incidents.
+    Versioning: Retains the dataset, scorer, prompt, model and agent configuration versions.
+
+2
+Function: Regression Gates in CI
+Description: Blocks promotion when quality, safety, cost or policy regression exceeds an approved threshold.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Risk Analyst / Compliance / Security
+Key Attributes:
+    Gate Criteria: Uses risk-tiered thresholds and compares the candidate against an approved baseline.
+    Failure Evidence: Gives builders the failing cases and the rule that blocked promotion.
+
+3
+Function: Trajectory Evaluation
+Description: Evaluates tools selection by agents, step efficiency, unnecessary calls, escalation and policy-compliant execution paths.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Risk Analyst / Compliance / Security
+Key Attributes:
+    Path Criteria: Evaluates approved tools, step limits, delegation depth and required approvals.
+    Outcome Separation: Prevents a correct-looking answer from hiding an unsafe or inefficient execution path.
+
+
+==================================================
+e.png
+==================================================
+
+4
+Function: Judge Governance Suite
+Description: Versions, calibrates, monitors and approves LLM-as-judge and other automated evaluators as governed models.
+Personas Benefiting Most:
+    Risk Analyst / Compliance / Security
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+Key Attributes:
+    Calibration: Compares automated judge results with qualified human decisions and known cases.
+    Drift Control: Versions and monitors the judge model, prompt and decision thresholds.
+
+5
+Function: Application Evaluation Onboarding & Suite Lifecycle
+Description: Registers each application evaluation suite as a governed asset and manages its ownership, versions, datasets, scorers, judges, thresholds, run history, freshness, coverage and monitoring obligations.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Risk Analyst / Compliance / Security
+    Business Owner / LOB Sponsor
+Key Attributes:
+    Registration Package: Records the application, owner, outcomes, risk tier, datasets, scoring methods, thresholds, environments and run cadence.
+    Version & Lineage: Links each application release to the exact suite version that qualified it.
+    Freshness & Drift Triggers: Starts a review when performance, requirements, incidents or system components change.
+
+
+==================================================
+f.png
+==================================================
+
+6
+Function: Comparative Model Benchmarking & Recommendation — ModelAdvisor
+Description: Runs the same application evaluation suite against multiple approved model configurations and produces an evidence-based comparison of quality, safety, reliability, latency and cost.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Risk Analyst / Compliance / Security
+    Platform Admin / AI Operations
+    Business Owner / LOB Sponsor
+Key Attributes:
+    Controlled Comparison Profile: Uses the same test cases, prompt, tools, retrieval state, parameters and scoring rules wherever possible.
+    Multi-Objective Scorecard: Compares quality, safety, policy adherence, latency, cost, consistency and operational constraints.
+    Reproducible Recommendation: Retains the candidate versions, results, trade-offs, selected model, decision owner and decision date.
+
+7
+Function: Online / Production Scoring
+Description: Scores sampled or full production traffic for quality, safety, policy adherence and outcome correctness.
+Personas Benefiting Most:
+    Platform Admin / AI Operations
+    Agent Builder / Developer
+    Risk Analyst / Compliance / Security
+    Business Owner / LOB Sponsor
+Key Attributes:
+    Sampling Policy: Prioritizes high-risk, failed and anomalous sessions for evaluation.
+    Privacy Control: Minimizes and redacts production content and retains it according to its data classification.
+
+8
+Function: Simulation
+Description: Replays multi-turn, adversarial and operational scenarios against a candidate version in a controlled environment.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Risk Analyst / Compliance / Security
+    Business Owner / LOB Sponsor
+Key Attributes:
+    Scenario Fidelity: Uses realistic tools, retrieval, permissions and failure conditions.
+    Repeatability: Keeps inputs, environment and expected outcomes reproducible.
+
+
+==================================================
+g.png
+==================================================
+
+Supporting Evaluation Functions — Should Have
+
+# | Function | Description | Personas Benefiting Most | Key Attributes
+
+9
+Function: Human Annotation Workflow
+Description: Manages review queues, annotation guidelines, reviewer agreement and the conversion of human feedback into evaluation data.
+Personas Benefiting Most:
+    Risk Analyst / Compliance / Security
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Business Owner / LOB Sponsor
+    End User
+Key Attributes:
+    Reviewer Quality: Measures reviewer calibration, consistency and subject-matter expertise.
+    Dataset Path: Moves approved annotations into versioned test data with traceable provenance.
+
+10
+Function: Red Teaming
+Description: Runs recurring adversarial testing for misuse, prompt injection, excessive autonomy, data exposure and business abuse scenarios.
+Personas Benefiting Most:
+    Risk Analyst / Compliance / Security
+    Agent Builder / Developer
+    Platform Admin / AI Operations
+    Business Owner / LOB Sponsor
+Key Attributes:
+    Threat Basis: Connects testing to current AI threats, business abuse cases and previous incidents.
+    Closure Evidence: Tracks the owner, remediation, retest results and remaining risk for each finding.
+
+11
+Function: Component, Tool & MCP Evaluation
+Description: Tests models, prompts, retrieval pipelines, tools, skills and MCP servers independently before they are included in an agent or application.
+Personas Benefiting Most:
+    Agent Builder / Developer
+    Risk Analyst / Compliance / Security
+    Platform Admin / AI Operations
+Key Attributes:
+    Contract Tests: Validates inputs, outputs, permissions, error handling and side effects.
+    Compatibility Matrix: Records supported agent frameworks, protocol versions and operating environments
+
+
+==================================================
+h.png
+==================================================
+
+How the Service Operates
+
+Stage | Evaluation-as-a-Service Activity
+
+1. Onboard
+    Register the application, intended business outcomes, risks, evaluation owner, datasets, scoring methods and thresholds.
+
+2. Build
+    Create versioned offline tests, trajectory tests, simulations and component-level evaluations.
+
+3. Qualify
+    Compare results with approved thresholds and prevent release when unacceptable regression is detected.
+
+4. Select
+    Use ModelAdvisor to compare approved models and recommend the best configuration for the specific application.
+
+5. Monitor
+    Evaluate production traffic and trigger review when quality, safety, behavior or business requirements change.
+
+6. Improve
+    Convert production findings, human feedback, incidents and red-team results into permanent evaluation cases.
+
+
+==================================================
+i.png
+==================================================
+
+Executive Takeaway
+
+Evaluation-as-a-Service creates a consistent evidence base for AI investment, model selection, release approval and production assurance. It allows the enterprise to scale AI adoption without leaving each application team to define its own quality and safety standards.
+
+
+==================================================
+spider-map.png
+==================================================
+
+Evaluation Framework Capability Comparison — Small Multiples
+
+Charts: Braintrust | AWS AgentCore Evaluations | Langfuse | Arize AX
+
+Axes (each chart, clockwise from top):
+    Evaluation Suites
+    Regression Gates in CI
+    Trajectory Evaluation
+    Judge Governance Suite
+    App Eval Onboarding & Lifecycle
+    Model Benchmarking / ModelAdvisor
+    Online / Production Scoring
+    Simulation
+    Human Annotation Workflow
+    Red Teaming
+    Component, Tool & MCP Eval
+    Salesforce Integration
+
+Scale rings: 1, 2, 3

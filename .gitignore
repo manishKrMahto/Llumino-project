@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+IMG_0133.HEIC
+IMG_0134.HEIC
